@@ -4,19 +4,18 @@ from behave import *
 
 @given(u'a duckduckgo API endpoint')
 def step_impl(context):
-    raise NotImplementedError(u'STEP: Given a duckduckgo API endpoint')
-
+    context.api_url = 'https://api.duckduckgo.com/'
 
 @when(u'the DuckDuckGo API is queried with hello world')
 def step_impl(context):
-    raise NotImplementedError(u'STEP: When the DuckDuckGo API is queried with hello world')
-
+    params = {'q': 'hello world', 'format': 'json'}
+    context.response = requests.get(context.api_url, params=params)
 
 @then(u'the response status code is 200')
 def step_impl(context):
-    raise NotImplementedError(u'STEP: Then the response status code is 200')
-
+    assert context.response.status_code == 200
 
 @then(u'the response contains results for hello world')
 def step_impl(context):
-    raise NotImplementedError(u'STEP: Then the response contains results for hello world')
+    json_data = context.response.json()["Heading"]
+    assert json_data == "Hello World"

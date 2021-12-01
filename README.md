@@ -72,3 +72,6 @@ def step_impl(context):
 ```
 
 d) then copy and paste the content of @given @when @then to feature/steps/search_in_duckduckgo.py file
+
+### Step 3. Implement steps
+
