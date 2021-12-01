@@ -76,3 +76,17 @@ d) then copy and paste the content of @given @when @then to feature/steps/search
 ### Step 3. Implement steps
 
 a) implement code in `/features/steps/search_in_duckduckgo.py`
+
+### Step 4. Run flask app
+
+a) install new requirements
+
+`pip install -r requirements.txt`
+
+b) run flask application
+
+`export FLASK_APP=app`
+
+`flask run`
+
+c) run bdd tests in a new terminal
