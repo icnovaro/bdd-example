@@ -90,3 +90,9 @@ b) run flask application
 `flask run`
 
 c) run bdd tests in a new terminal
+
+### Step 5. Reload flask app
+
+`flask run`
+
+`behave`
