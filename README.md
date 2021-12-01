@@ -75,3 +75,4 @@ d) then copy and paste the content of @given @when @then to feature/steps/search
 
 ### Step 3. Implement steps
 
+a) implement code in `/features/steps/search_in_duckduckgo.py`
